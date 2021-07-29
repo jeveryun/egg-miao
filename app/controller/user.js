@@ -1,8 +1,14 @@
 'use strict'
 
 class User extends C {
-  async signup() {
-    this.ctx.body = '注册'
+  /**
+   * @description 注册
+   * @member User
+   */
+  async signUp() {
+    await this.ctx.verify('user.signup', 'body')
+    const json = await this.ctx.service.user.signUp()
+    this.ctx.body = json
   }
 
   async signin() {

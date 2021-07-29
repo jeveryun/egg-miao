@@ -2,7 +2,7 @@
 
 module.exports = ctl => ({
   post: {
-    '/signup': ctl.user.signup,
-    '/signin': ctl.user.signin
+    '/signup': ctl.user.signUp,
+    '/signin': ctl.user.signIn
   }
 })
