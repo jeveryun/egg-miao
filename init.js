@@ -22,6 +22,10 @@ function globalBaseInitial(baseDir) {
     global.check = check
   }
 
+  if (notInGlobal('Service')) {
+    global.S = global.Service = require('egg').Service
+  }
+
   if (notInGlobal('Controller')) {
     global.C = global.controller = _use('app/controller/base')
   }

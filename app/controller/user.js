@@ -11,7 +11,7 @@ class User extends C {
     this.ctx.body = json
   }
 
-  async signin() {
+  async signIn() {
     this.ctx.body = '登录'
   }
 }
